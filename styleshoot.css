@@ -9,7 +9,7 @@ body {
     background-color: white;
     font-family: 'Amatic SC', cursive;
     font-size: 5vh;
-    color: white;
+
 }
 
 .createspace {
@@ -60,6 +60,7 @@ nav {
 
 article {
     background-color: lightgray;
+    color: white;
     background-image: url(assets/extras/wood.jpeg);
     border-radius: .5rem;
     display: flex;
@@ -153,6 +154,18 @@ footer {
     background-color: #fefefe;
     color: black;
     border: 1px solid #7c1f17;
-    margin: 1em;
+    margin: 5rem;
+    border-radius: .5rem;
     padding: 2em;
+    border-style: none;
+    box-shadow: 5px 5px 5px grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-image{
+    max-width: 50vw;
+    height: auto;
+    position: relative;
 }

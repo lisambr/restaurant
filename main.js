@@ -73,7 +73,13 @@ function showDish(dish) {
 function showDetails(data) {
     console.log(data)
     modal.querySelector(".modal-name").textContent = data.name;
-    modal.querySelector(".modal-description").textContent = data.longdescription;
+    modal.querySelector(".modal-description").textContent = data.shortdescription;
+    modal.querySelector(".modal-price").textContent = `${data.price},-- DKK`;
+    modal.querySelector(".modal-image").src = `assets/imgs/medium/${data.image}-md.jpg`;
 
+    /*if(data.discount){
+        modal.querySelector(".modal-price").classList.add("discount");
+        modal.querySelector(".modal-discount").textContent = `${Math.round(data.price - data.discount / 100 * data.price)},--DKK`
+    }*/
     modal.classList.remove("hide");
 }
