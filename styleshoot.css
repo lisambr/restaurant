@@ -1,4 +1,4 @@
-@import{"https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"}
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -7,8 +7,9 @@ html {
 body {
     /*background-image: url("/assets/backGround.jpg");*/
     background-color: white;
-    font-family: 'Abril Fatface', cursive;
-    font-size: 1rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 5vh;
+    color: white;
 }
 
 .createspace {
@@ -33,6 +34,7 @@ nav {
 .navItems {
     height: 7vh;
     background-color: white;
+    background-image: url(assets/extras/wood.jpeg);
     padding: 1rem;
     margin: 1rem;
     border-radius: 10rem;
@@ -59,6 +61,7 @@ nav {
 
 article {
     background-color: lightgray;
+    background-image: url(assets/extras/wood.jpeg);
     border-radius: .5rem;
     display: flex;
     align-items: center;
@@ -92,6 +95,8 @@ button {
     color: black;
     width: 6rem;
     margin-top: 1rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 4vh;
 }
 
 .shadow {
