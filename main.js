@@ -44,7 +44,7 @@ function showDish(dish) {
     copy.querySelector(".data_price").textContent = `${dish.price},-- DKK`;
     if (dish.discount) {
         copy.querySelector(".data_price").classList.add("discount");
-        copy.querySelector(".data_discount").textContent = Math.round(dish.price - dish.discount / 100 * dish.price)
+        copy.querySelector(".data_discount").textContent = `${Math.round(dish.price - dish.discount / 100 * dish.price)},-- DKK`
     } else {
         copy.querySelector(".data_discount").remove();
     }

@@ -34,7 +34,6 @@ nav {
 .navItems {
     height: 7vh;
     background-color: white;
-    background-image: url(assets/extras/wood.jpeg);
     padding: 1rem;
     margin: 1rem;
     border-radius: 10rem;
@@ -152,6 +151,7 @@ footer {
 
 .modal-content {
     background-color: #fefefe;
+    color: black;
     border: 1px solid #7c1f17;
     margin: 1em;
     padding: 2em;
