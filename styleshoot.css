@@ -1,3 +1,5 @@
+@import{"https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap"}
+
 html {
     scroll-behavior: smooth;
 }
@@ -5,7 +7,7 @@ html {
 body {
     /*background-image: url("/assets/backGround.jpg");*/
     background-color: white;
-    font-family: verdana;
+    font-family: 'Abril Fatface', cursive;
     font-size: 1rem;
 }
 
