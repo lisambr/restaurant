@@ -1,6 +1,9 @@
 const modal = document.querySelector(".modal-background");
 modal.addEventListener("click", () => {
     modal.classList.add("hide");
+    modal.querySelector(".modal-vegetarian").classList.remove("hide");
+    modal.querySelector(".modal-discount").classList.remove("hide");
+
 });
 
 /* FETCHING DATA FROM DATABASE */
@@ -37,8 +40,11 @@ function showDish(dish) {
 
     copy.querySelector(".data_name").textContent = dish.name;
 
-    copy.querySelector(".containsAlcohol").textContent = `${dish.alcohol}% Alcohol`;
-
+    if(dish.alcohol){
+        copy.querySelector(".containsAlcohol").textContent = `${dish.alcohol}% Alcohol`;
+    }else{
+        copy.querySelector(".containsAlcohol").remove();
+    }
     copy.querySelector(".shadow").src = `assets/imgs/medium/${dish.image}-md.jpg`;
 
     copy.querySelector(".data_price").textContent = `${dish.price},-- DKK`;
@@ -75,11 +81,24 @@ function showDetails(data) {
     modal.querySelector(".modal-name").textContent = data.name;
     modal.querySelector(".modal-description").textContent = data.shortdescription;
     modal.querySelector(".modal-price").textContent = `${data.price},-- DKK`;
+    modal.classList.remove("hide");
+
+    if (data.discount) {
+        modal.querySelector(".modal-price").classList.add("discount");
+        modal.querySelector(".modal-discount").textContent = `${Math.round(data.price - data.discount / 100 * data.price)},-- DKK`
+    } else {
+        modal.querySelector(".modal-discount").classList.add(".hide")
+    }
+
+    if(data.vegetarian){
+    }else{
+        modal.querySelector(".modal-vegetarian").classList.add(".hide")
+    }
    /* modal.querySelector(".modal-image").src = `assets/imgs/medium/${data.image}-md.jpg`;
 
     if(data.discount){
         modal.querySelector(".modal-price").classList.add("discount");
         modal.querySelector(".modal-discount").textContent = `${Math.round(data.price - data.discount / 100 * data.price)},--DKK`
     }*/
-    modal.classList.remove("hide");
+
 }

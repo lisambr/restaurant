@@ -99,6 +99,12 @@ button {
     font-size: 4vh;
 }
 
+button:hover {
+    background-color: gainsboro;
+    color: white;
+    box-shadow: 2px 2px 2px white;
+}
+
 .shadow {
     max-width: 100%;
     height: auto;
@@ -165,8 +171,13 @@ footer {
     flex-direction: column;
 }
 
-.modal-image{
+.modal-image {
     max-width: 50vw;
     height: auto;
     position: relative;
+}
+
+.modal-vegetarian{
+    width: 4vw;
+    height: auto;
 }
