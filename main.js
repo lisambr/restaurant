@@ -87,12 +87,13 @@ function showDetails(data) {
         modal.querySelector(".modal-price").classList.add("discount");
         modal.querySelector(".modal-discount").textContent = `${Math.round(data.price - data.discount / 100 * data.price)},-- DKK`
     } else {
-        modal.querySelector(".modal-discount").classList.add(".hide")
+        modal.querySelector(".modal-discount").classList.add("hide")
     }
 
-    if(data.vegetarian){
-    }else{
-        modal.querySelector(".modal-vegetarian").classList.add(".hide")
+    if(data.vegetarian){//do nutin
+    }
+    else{
+        modal.querySelector(".modal-vegetarian").classList.add("hide")
     }
    /* modal.querySelector(".modal-image").src = `assets/imgs/medium/${data.image}-md.jpg`;
 
